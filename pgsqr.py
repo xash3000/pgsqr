@@ -80,11 +80,11 @@ class Game:
                         y_pos = 20
                         y_speed = ENEMY_SPEED
                 elif _dir == "L":
-                        y_pos = SCREEN_WIDTH / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
+                        y_pos = SCREEN_HEIGHT / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
                         x_pos = SCREEN_WIDTH - 20
                         x_speed = -ENEMY_SPEED
                 elif _dir == "R":
-                        y_pos = SCREEN_WIDTH / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
+                        y_pos = SCREEN_HEIGHT / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
                         x_pos = 20
                         x_speed = ENEMY_SPEED
                 enemy = Enemy(x_pos, y_pos, x_speed, y_speed)
