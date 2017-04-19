@@ -62,8 +62,8 @@ class Game:
                 self.all_sprites.add(wall_4)
 
         def create_coin(self):
-                x_pos = random.randint(230, 470)
-                y_pos = random.randint(180, 310)
+                x_pos = SCREEN_WIDTH / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
+                y_pos = SCREEN_HEIGHT / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2) * (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
                 self.coin = Coin(x_pos, y_pos)
                 self.all_sprites.add(self.coin)
                 self.coins.add(self.coin)
@@ -72,19 +72,19 @@ class Game:
                 _dir = random.choice(["U", "D", "L", "R"])
                 x_speed, y_speed = 0, 0
                 if _dir == "U":
-                        x_pos = random.randint(230, 470)
+                        x_pos = SCREEN_WIDTH / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
                         y_pos = SCREEN_HEIGHT - 20
                         y_speed = -ENEMY_SPEED
                 elif _dir == "D":
-                        x_pos = random.randint(230, 470)
+                        x_pos = SCREEN_WIDTH / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
                         y_pos = 20
                         y_speed = ENEMY_SPEED
                 elif _dir == "L":
-                        y_pos = random.randint(170, 320)
+                        y_pos = SCREEN_WIDTH / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
                         x_pos = SCREEN_WIDTH - 20
                         x_speed = -ENEMY_SPEED
                 elif _dir == "R":
-                        y_pos = random.randint(170, 320)
+                        y_pos = SCREEN_WIDTH / 2 - WALL_HEIGHT / 2 + WALL_WIDTH + random.randint(0, 2)* (WALL_HEIGHT / 3.5) + (WALL_HEIGHT / 7)
                         x_pos = 20
                         x_speed = ENEMY_SPEED
                 enemy = Enemy(x_pos, y_pos, x_speed, y_speed)
