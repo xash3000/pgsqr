@@ -34,7 +34,7 @@ class Game:
                 self.coins = pygame.sprite.Group()
                 self.create_objects()
                 self.enemy_respawn_event = pygame.USEREVENT+1
-                pygame.time.set_timer(self.enemy_respawn_event, 750)
+                pygame.time.set_timer(self.enemy_respawn_event, 1000)
 
         def create_objects(self):
                 self.create_walls()
@@ -173,7 +173,6 @@ class Player(pygame.sprite.Sprite):
         def update(self):
                 self.rect.x += self.x_speed
                 self.traveled_distance += abs(self.x_speed)
-                print(self.traveled_distance)
                 walls_hit = pygame.sprite.spritecollide(self, self.walls, False)
                 for wall in walls_hit:
                         if self.x_speed > 0:
