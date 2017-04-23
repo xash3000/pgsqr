@@ -147,7 +147,7 @@ class Game:
                         if not self.started:
                                 i = "Use arrow keys to take the coin"
                                 instructions = font.render(i, True, WHITE)
-                                self.screen.blit(instructions, (200, 80))
+                                self.screen.blit(instructions, (200, 50))
                         self.all_sprites.draw(self.screen)
                 pygame.display.flip()
 
